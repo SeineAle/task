@@ -8,9 +8,11 @@ const ItemsList = () => {
 
   return (
     <div className="items-list">
-      <div class="bg-gray-800 text-gray-100 text-xl font-semibold p-4 rounded-lg shadow-md mt-2 mx-4 text-center">
+      {
+        items.length ? <div class="bg-gray-800 text-gray-100 text-xl font-semibold p-4 rounded-lg shadow-md mt-2 mx-4 text-center">
         Often Bought Together !!
-      </div>
+        </div> : <></>
+      }
       {items.map((itemData) => (
         <Card
           key={itemData.id}
